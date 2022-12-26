@@ -1,0 +1,17 @@
+@charset "ISO-8859-1";
+
+.card{
+	border-color : #002260;
+}
+
+#deco{
+	color : #002260;
+}
+
+#body{
+	background-color : #002260;
+}
+
+#general{
+	color : white;
+}

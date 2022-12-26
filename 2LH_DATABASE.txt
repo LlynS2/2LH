@@ -1,0 +1,81 @@
+-------------------------------------------------------------PROGRESSO----------------------------------------------------------------
+CREATE TABLE t_atividades (
+    id_ativ           INTEGER NOT NULL,
+    tipo_ativ         VARCHAR2(4000) NOT NULL,
+    dias_praticados   VARCHAR2(4000) NOT NULL,
+    calorias_perdidas VARCHAR2(4000) NOT NULL,
+    pressao_arterial  VARCHAR2(4000) NOT NULL,
+    nivel_da_ativ     VARCHAR2(4000) NOT NULL,
+    t_cadastro_id_cad INTEGER NOT NULL
+);
+
+--SEQUÊNCIA
+CREATE SEQUENCE SQE_ATIVIDADES INCREMENT BY 1 START WITH 1;
+--KEY
+ALTER TABLE t_atividades ADD CONSTRAINT t_atividades_pk PRIMARY KEY ( id_ativ );
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+CREATE TABLE t_consumo_de_alimentos (
+    id_con_ali        INTEGER NOT NULL,
+    nm_alimento       VARCHAR2(4000) NOT NULL,
+    calorias_alimento VARCHAR2(4000) NOT NULL,
+    t_cadastro_id_cad INTEGER NOT NULL
+);
+
+--SEQUÊNCIA
+CREATE SEQUENCE SQE_CON_ALIMENTO INCREMENT BY 1 START WITH 1;
+--KEY
+ALTER TABLE t_consumo_de_alimentos ADD CONSTRAINT t_consumo_de_alimentos_pk PRIMARY KEY ( id_con_ali );
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+CREATE TABLE t_imc (
+    id_imc            INTEGER NOT NULL,
+    altura            NUMBER NOT NULL,
+    peso              NUMBER NOT NULL,
+    resultado         NUMBER NOT NULL,
+    t_cadastro_id_cad INTEGER NOT NULL
+);
+
+--SEQUÊNCIA
+CREATE SEQUENCE SQE_IMC INCREMENT BY 1 START WITH 1;
+--KEY
+ALTER TABLE t_imc ADD CONSTRAINT t_imc_pk PRIMARY KEY ( id_imc );
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------ACESSO-------------------------------------------------------------------
+
+CREATE TABLE t_cadastro (
+    id_cad     INTEGER NOT NULL,
+    nm_usuario VARCHAR2(4000) NOT NULL,
+    senha      VARCHAR2(4000) NOT NULL,
+    email      VARCHAR2(4000) NOT NULL,
+    dt_nasc    VARCHAR2(4000) NOT NULL
+);
+
+SELECT * FROM t_cadastro ;
+
+DELETE FROM t_cadastro;
+
+--SEQUÊNCIA
+CREATE SEQUENCE SQE_CADASTRO INCREMENT BY 1 START WITH 1;
+--KEY
+ALTER TABLE t_cadastro ADD CONSTRAINT t_cadastro_pk PRIMARY KEY ( id_cad );
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------------------------------
+ALTER TABLE t_atividades
+    ADD CONSTRAINT t_atividades_t_cadastro_fk FOREIGN KEY ( t_cadastro_id_cad )
+        REFERENCES t_cadastro ( id_cad );
+
+ALTER TABLE t_consumo_de_alimentos
+    ADD CONSTRAINT t_consumo_de_alimentos_t_cadastro_fk FOREIGN KEY ( t_cadastro_id_cad )
+        REFERENCES t_cadastro ( id_cad );
+
+ALTER TABLE t_imc
+    ADD CONSTRAINT t_imc_t_cadastro_fk FOREIGN KEY ( t_cadastro_id_cad )
+        REFERENCES t_cadastro ( id_cad );
+--------------------------------------------------------------------------------------------------------------------------------------        
