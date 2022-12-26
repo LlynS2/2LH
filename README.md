@@ -24,6 +24,37 @@
  <img width="auto" height="auto" src="https://user-images.githubusercontent.com/86667062/209578600-7ac978af-1a22-478d-b143-89c8d307ae74.png">
  <img width="auto" height="auto" src="https://user-images.githubusercontent.com/86667062/209578620-5403dd24-3c31-4a73-ae22-5fa5990e4d52.png">
  <img width="auto" height="auto" src="https://user-images.githubusercontent.com/86667062/209578632-366b6356-187a-4455-bfed-81dbb8bbec30.png">
+</div><br>
+
+<div align="left" >
+  <p>⎘ » 𝕋𝕠𝕠𝕝𝕤 ˎˊ˗ ࿐°</p>
+  
+   <table>
+     <tr>
+          <td>✅</td>
+          <td>𝐄𝐜𝐥𝐢𝐩𝐬𝐞</td>
+          <td>✅</td>
+          <td>𝐉𝐃𝐊 𝟏𝟑 </td>
+      </tr>
+      <tr>
+          <td>✅</td>
+          <td>𝐎𝐫𝐚𝐜𝐥𝐞</td>
+          <td>✅</td>
+          <td>𝐃𝐀𝐎</td>
+      </tr>
+      <tr>
+          <td>✅</td>
+          <td>𝐇𝐓𝐌𝐋</td>
+          <td>✅</td>
+          <td>𝐂𝐒𝐒</td>
+      </tr>
+      <tr>
+          <td>✅</td>
+          <td>𝐉𝐒</td>
+          <td>✅</td>
+          <td>𝐓𝐨𝐦𝐂𝐚𝐭𝟏𝟎</td>
+      </tr>
+   </table>
 </div>
 
  <div>
